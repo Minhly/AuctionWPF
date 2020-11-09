@@ -43,7 +43,7 @@ namespace AuctionWPF
                 sqlCmd.Parameters.AddWithValue("@Username", userName.Text);
                 sqlCmd.Parameters.AddWithValue("@Password", passWord.Password);
                 int count = Convert.ToInt32(sqlCmd.ExecuteScalar());
-                string userzName = userName.Text;
+                Global.userProp = userName.Text;
                 if (count == 1)
                 {
                     MainWindow dashboard = new MainWindow();
@@ -64,29 +64,6 @@ namespace AuctionWPF
             {
                 sqlCon.Close();
             }
-        }
-    }
-
-    public static class Global
-    {
-        public static string s_sSomeProperty;
-
-        public static void Globals()
-        {
-            s_sSomeProperty = ;
         }   
-
-        public static string SomeProperty
-        {
-            get
-            {
-                return (s_sSomeProperty);
-            }
-            set
-            {
-                s_sSomeProperty = value;
-            }
-        }
     }
-
 }

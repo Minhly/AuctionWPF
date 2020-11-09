@@ -9,9 +9,9 @@
     <Grid>
         <Label Content="Login to the awesome Auction" FontWeight="bold" FontSize="25" HorizontalAlignment="Left" Margin="34,21,0,0" VerticalAlignment="Top"/>
         <Label Content="Username:" HorizontalAlignment="Left" Margin="116,80,0,0" VerticalAlignment="Top"/>
-        <TextBox Name="userName"  HorizontalAlignment="Left" Height="24" Margin="119,111,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="186"/>
+        <TextBox Name="userName" FontSize="17" HorizontalAlignment="Left" Height="24" Margin="119,111,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="186"/>
         <Label Content="Password:" HorizontalAlignment="Left" Margin="116,146,0,0" VerticalAlignment="Top"/>
-        <PasswordBox Name="passWord" HorizontalAlignment="Left" Margin="119,177,0,0" VerticalAlignment="Top" Height="25" Width="186"/>
+        <PasswordBox Name="passWord" FontSize="17" HorizontalAlignment="Left" Margin="119,177,0,0" VerticalAlignment="Top" Height="25" Width="186"/>
         <Button Content="Login" IsDefault="True" HorizontalAlignment="Left" Margin="119,221,0,0" VerticalAlignment="Top" Width="186" Height="27" Click="Button_Click"/>
     </Grid>
 </Window>

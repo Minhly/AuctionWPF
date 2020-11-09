@@ -7,23 +7,27 @@
         mc:Ignorable="d"
         Title="MainWindow" Height="420" Width="1000" Background="LightGoldenrodYellow">
     <Grid>
-        <DataGrid Name="dataGrid" HorizontalAlignment="Left" Height="269" Margin="59,86,0,0" VerticalAlignment="Top" Width="287" CanUserAddRows="false" AutoGenerateColumns="False" SelectionChanged="dataGrid_SelectionChanged">
+        <DataGrid Name="dataGrid" HorizontalAlignment="Left" Height="254" Margin="59,101,0,0" VerticalAlignment="Top" Width="287" CanUserAddRows="false" AutoGenerateColumns="False" SelectionChanged="dataGrid_SelectionChanged">
             <DataGrid.Columns>
                 <DataGridTextColumn Binding="{Binding item_name}" Header="name" Width="150" IsReadOnly="True"/>
                 <DataGridTextColumn Header="End date" Binding="{Binding date_deadline}" Width="*" IsReadOnly="True">
                 </DataGridTextColumn>
             </DataGrid.Columns>
         </DataGrid>
-        <TextBox HorizontalAlignment="Left" Height="23" Margin="59,44,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="153"/>
-        <Label Name="itmName" Content="Item name:" FontSize="20" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="628,65,0,0"/>
-        <TextBox Name="bidTxt" HorizontalAlignment="Left" Height="24" Margin="628,269,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120"/>
-        <Label Name="price" Content="price" HorizontalAlignment="Left" Margin="637,95,0,0" VerticalAlignment="Top"/>
-        <Label Name="highBid" Content="bid" FontSize="20" HorizontalAlignment="Left" Margin="877,93,0,0" VerticalAlignment="Top"/>
-        <Label Content="Place Bid:" HorizontalAlignment="Left" Margin="628,241,0,0" VerticalAlignment="Top"/>
-        <Button Content="Bid" HorizontalAlignment="Left" Margin="771,269,0,0" VerticalAlignment="Top" Width="75" Height="24" Click="Bid_Button"/>
+        <TextBox HorizontalAlignment="Left" Height="23" Margin="59,66,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="153"/>
+        <Label Name="itmName" Content="..." FontSize="20" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="628,65,0,0"/>
+        <TextBox Name="bidTxt" HorizontalAlignment="Left" Height="24" Margin="628,269,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="138"/>
+        <Label Name="price" Content="..." HorizontalAlignment="Left" Margin="711,95,0,0" VerticalAlignment="Top"/>
+        <Label FontWeight="Bold" Name="highBid" Content="..." FontSize="20" HorizontalAlignment="Left" Margin="858,89,0,0" VerticalAlignment="Top"/>
+        <Label Content="Place Bid:" HorizontalAlignment="Left" Margin="623,241,0,0" VerticalAlignment="Top"/>
+        <Button FontWeight="Bold" Content="Bid" HorizontalAlignment="Left" Margin="771,269,0,0" VerticalAlignment="Top" Width="75" Height="24" Click="Bid_Button"/>
         <Label Content="Highest bid:" HorizontalAlignment="Left" Margin="858,69,0,0" VerticalAlignment="Top"/>
-        <Image HorizontalAlignment="Left" Height="136" Margin="401,86,0,0" VerticalAlignment="Top" Width="186"/>
+        <Image Source="images/mona.jpg" Stretch="Fill" HorizontalAlignment="Left" Height="290" Margin="390,65,0,0" VerticalAlignment="Top" Width="197"/>
         <TextBox Name="description" HorizontalAlignment="Left" Height="86" Margin="628,139,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="218"/>
-        <Button Content="Search" HorizontalAlignment="Left" Margin="217,44,0,0" VerticalAlignment="Top" Width="129" Height="23"/>
+        <Button FontWeight="Bold" Content="Search" HorizontalAlignment="Left" Margin="217,66,0,0" VerticalAlignment="Top" Width="129" Height="23"/>
+        <Label Content="Starting price:" HorizontalAlignment="Left" Margin="628,95,0,0" VerticalAlignment="Top"/>
+        <Label Content="Highest Bidder:" HorizontalAlignment="Left" Margin="858,139,0,0" VerticalAlignment="Top"/>
+        <Label FontWeight="Bold" FontSize="20" Name="highBidderName" Content="..." HorizontalAlignment="Left" Margin="858,165,0,0" VerticalAlignment="Top"/>
+        <Label FontSize="23" FontWeight="Bold" Name="TitleTxt"  Content="Label" HorizontalAlignment="Left" Margin="59,15,0,0" VerticalAlignment="Top" Height="42"/>
     </Grid>
 </Window>

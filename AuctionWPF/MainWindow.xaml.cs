@@ -46,6 +46,7 @@ namespace AuctionWPF
                 DataTable dt = new DataTable("auction");
                 da.Fill(dt);
                 dataGrid.ItemsSource = dt.DefaultView;
+                TitleTxt.Content = "Welcome " + Global.userProp;
             }
             catch (Exception ex)
             {
@@ -63,12 +64,14 @@ namespace AuctionWPF
             DataRowView row_selected = gd.SelectedItem as DataRowView;
             if (row_selected != null)
             {
+                highBidderName.Content = row_selected["winner_name"].ToString();
+                Global.highestValue = row_selected["highest_bid"].ToString();
+                Global.idProp = row_selected["id"].ToString();
                 itmName.Content = row_selected["item_name"].ToString();
                 description.Text = row_selected["description"].ToString();
                 price.Content = row_selected["price"].ToString();
                 highBid.Content = row_selected["highest_bid"].ToString();
             }
-
         }
 
         private void Bid_Button(object sender, RoutedEventArgs e)
@@ -80,12 +83,30 @@ namespace AuctionWPF
                 {
                     sqlCon.Open();
                 }
-                String Query = "INSERT INTO Auction_items (highest_bid, winner_id) Values (@bidtxt, (@winnerid));";
+                int bidText = Convert.ToInt32(bidTxt.Text);
+                int highVal = Convert.ToInt32(Global.highestValue);
+                if (bidText >= highVal)
+                {
+                String Query = "INSERT INTO Auction_bids (user_id, item_id, bid_price) Values (@bidID, @itemID, @bidtxt);";
                 SqlCommand sqlCmd = new SqlCommand(Query, sqlCon);
                 sqlCmd.CommandType = CommandType.Text;
-                sqlCmd.Parameters.AddWithValue("@winnerid", userName.Text) ;
+                sqlCmd.Parameters.AddWithValue("@bidID", Global.userProp);
+                sqlCmd.Parameters.AddWithValue("@itemID", Global.idProp);
                 sqlCmd.Parameters.AddWithValue("@bidtxt", bidTxt.Text);
-                int count = Convert.ToInt32(sqlCmd.ExecuteScalar());
+                int count2 = Convert.ToInt32(sqlCmd.ExecuteScalar());
+
+                String Query2 = "UPDATE Auction_items SET highest_bid = @highBid, winner_name = @winnerName WHERE id = @itemIDs;";
+                SqlCommand sqlCmd2 = new SqlCommand(Query2, sqlCon);
+                sqlCmd2.CommandType = CommandType.Text;
+                sqlCmd2.Parameters.AddWithValue("@highBid", bidText);
+                sqlCmd2.Parameters.AddWithValue("@winnerName", Global.userProp);
+                sqlCmd2.Parameters.AddWithValue("@itemIDs", Global.idProp);
+                int count1 = Convert.ToInt32(sqlCmd2.ExecuteScalar());
+                }
+                else
+                {
+                    MessageBox.Show("Your bid was lower please try again.");
+                }
                 MainWindow dashboard = new MainWindow();
                 dashboard.Show();
                 this.Close();
