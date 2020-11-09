@@ -1,0 +1,17 @@
+C:\Users\minh0040\source\repos\AuctionWPF\AuctionWPF\obj\Debug\AuctionWPF.csprojAssemblyReference.cache
+C:\Users\minh0040\source\repos\AuctionWPF\AuctionWPF\obj\Debug\MainWindow.g.cs
+C:\Users\minh0040\source\repos\AuctionWPF\AuctionWPF\obj\Debug\App.g.cs
+C:\Users\minh0040\source\repos\AuctionWPF\AuctionWPF\obj\Debug\AuctionWPF_MarkupCompile.cache
+C:\Users\minh0040\source\repos\AuctionWPF\AuctionWPF\obj\Debug\AuctionWPF_MarkupCompile.lref
+C:\Users\minh0040\source\repos\AuctionWPF\AuctionWPF\bin\Debug\AuctionWPF.exe.config
+C:\Users\minh0040\source\repos\AuctionWPF\AuctionWPF\bin\Debug\AuctionWPF.exe
+C:\Users\minh0040\source\repos\AuctionWPF\AuctionWPF\bin\Debug\AuctionWPF.pdb
+C:\Users\minh0040\source\repos\AuctionWPF\AuctionWPF\obj\Debug\MainWindow.baml
+C:\Users\minh0040\source\repos\AuctionWPF\AuctionWPF\obj\Debug\AuctionWPF.g.resources
+C:\Users\minh0040\source\repos\AuctionWPF\AuctionWPF\obj\Debug\AuctionWPF.Properties.Resources.resources
+C:\Users\minh0040\source\repos\AuctionWPF\AuctionWPF\obj\Debug\AuctionWPF.csproj.GenerateResource.cache
+C:\Users\minh0040\source\repos\AuctionWPF\AuctionWPF\obj\Debug\AuctionWPF.csproj.CoreCompileInputs.cache
+C:\Users\minh0040\source\repos\AuctionWPF\AuctionWPF\obj\Debug\AuctionWPF.exe
+C:\Users\minh0040\source\repos\AuctionWPF\AuctionWPF\obj\Debug\AuctionWPF.pdb
+C:\Users\minh0040\source\repos\AuctionWPF\AuctionWPF\obj\Debug\Login.g.cs
+C:\Users\minh0040\source\repos\AuctionWPF\AuctionWPF\obj\Debug\Login.baml

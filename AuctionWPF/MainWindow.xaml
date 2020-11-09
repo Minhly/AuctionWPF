@@ -1,0 +1,29 @@
+﻿<Window x:Class="AuctionWPF.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:AuctionWPF"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="420" Width="1000" Background="LightGoldenrodYellow">
+    <Grid>
+        <DataGrid Name="dataGrid" HorizontalAlignment="Left" Height="269" Margin="59,86,0,0" VerticalAlignment="Top" Width="287" CanUserAddRows="false" AutoGenerateColumns="False" SelectionChanged="dataGrid_SelectionChanged">
+            <DataGrid.Columns>
+                <DataGridTextColumn Binding="{Binding item_name}" Header="name" Width="150" IsReadOnly="True"/>
+                <DataGridTextColumn Header="End date" Binding="{Binding date_deadline}" Width="*" IsReadOnly="True">
+                </DataGridTextColumn>
+            </DataGrid.Columns>
+        </DataGrid>
+        <TextBox HorizontalAlignment="Left" Height="23" Margin="59,44,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="153"/>
+        <Label Name="itmName" Content="Item name:" FontSize="20" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="628,65,0,0"/>
+        <TextBox Name="bidTxt" HorizontalAlignment="Left" Height="24" Margin="628,269,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120"/>
+        <Label Name="price" Content="price" HorizontalAlignment="Left" Margin="637,95,0,0" VerticalAlignment="Top"/>
+        <Label Name="highBid" Content="bid" FontSize="20" HorizontalAlignment="Left" Margin="877,93,0,0" VerticalAlignment="Top"/>
+        <Label Content="Place Bid:" HorizontalAlignment="Left" Margin="628,241,0,0" VerticalAlignment="Top"/>
+        <Button Content="Bid" HorizontalAlignment="Left" Margin="771,269,0,0" VerticalAlignment="Top" Width="75" Height="24" Click="Bid_Button"/>
+        <Label Content="Highest bid:" HorizontalAlignment="Left" Margin="858,69,0,0" VerticalAlignment="Top"/>
+        <Image HorizontalAlignment="Left" Height="136" Margin="401,86,0,0" VerticalAlignment="Top" Width="186"/>
+        <TextBox Name="description" HorizontalAlignment="Left" Height="86" Margin="628,139,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="218"/>
+        <Button Content="Search" HorizontalAlignment="Left" Margin="217,44,0,0" VerticalAlignment="Top" Width="129" Height="23"/>
+    </Grid>
+</Window>
