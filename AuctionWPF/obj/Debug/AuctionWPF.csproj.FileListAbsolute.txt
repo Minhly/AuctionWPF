@@ -15,3 +15,5 @@ C:\Users\minh0040\source\repos\AuctionWPF\AuctionWPF\obj\Debug\AuctionWPF.exe
 C:\Users\minh0040\source\repos\AuctionWPF\AuctionWPF\obj\Debug\AuctionWPF.pdb
 C:\Users\minh0040\source\repos\AuctionWPF\AuctionWPF\obj\Debug\Login.g.cs
 C:\Users\minh0040\source\repos\AuctionWPF\AuctionWPF\obj\Debug\Login.baml
+C:\Users\minh0040\source\repos\AuctionWPF\AuctionWPF\obj\Debug\CreateAuction.g.cs
+C:\Users\minh0040\source\repos\AuctionWPF\AuctionWPF\obj\Debug\CreateAuction.baml

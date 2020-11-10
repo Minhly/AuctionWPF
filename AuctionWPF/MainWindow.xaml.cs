@@ -71,6 +71,8 @@ namespace AuctionWPF
                 description.Text = row_selected["description"].ToString();
                 price.Content = row_selected["price"].ToString();
                 highBid.Content = row_selected["highest_bid"].ToString();
+                string itemPicture = row_selected["picture"].ToString();
+                ImageViewer1.Source = new BitmapImage(new Uri(@"/images/"+itemPicture+"", UriKind.Relative));
             }
         }
 
@@ -119,6 +121,41 @@ namespace AuctionWPF
             {
                 sqlCon.Close();
             }
+        }
+
+        private void searchClick(object sender, RoutedEventArgs e)
+        {
+            SqlConnection sqlCon = new SqlConnection(@"Data Source=MININT-3GF1PEB; Initial Catalog=SDE; Integrated Security= True;");
+            try
+            {
+                if (sqlCon.State == ConnectionState.Closed)
+                {
+                    sqlCon.Open();
+                }
+                string searchText = searchTxt.Text;
+                String Query = "SELECT * FROM Auction_items WHERE item_name LIKE '%"+searchText+"%' ";
+                SqlCommand sqlCmd = new SqlCommand(Query, sqlCon);
+                sqlCmd.CommandType = CommandType.Text;
+                SqlDataAdapter da = new SqlDataAdapter(sqlCmd);
+                DataTable dt = new DataTable("auction2");
+                da.Fill(dt);
+                dataGrid.ItemsSource = dt.DefaultView;
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
+            finally
+            {
+                sqlCon.Close();
+            }
+        }
+
+        private void Sell_Item_Click(object sender, RoutedEventArgs e)
+        {
+            CreateAuction dashboard = new CreateAuction();
+            dashboard.Show();
+            this.Close();
         }
     }
 }

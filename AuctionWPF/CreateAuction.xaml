@@ -1,0 +1,21 @@
+﻿<Window x:Class="AuctionWPF.CreateAuction"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:AuctionWPF"
+        mc:Ignorable="d"
+        Title="CreateAuction" Height="370" Width="800">
+    <Grid>
+        <Label FontWeight="Bold" FontSize="25" Content="List an item to sell" HorizontalAlignment="Left" Margin="25,14,0,0" VerticalAlignment="Top"/>
+        <Label Content="Item Name:" HorizontalAlignment="Left" Margin="35,69,0,0" VerticalAlignment="Top"/>
+        <TextBox HorizontalAlignment="Left" Height="23" Margin="35,100,0,0" TextWrapping="Wrap"  VerticalAlignment="Top" Width="214"/>
+        <Label Content="Start Price:" HorizontalAlignment="Left" Margin="35,137,0,0" VerticalAlignment="Top"/>
+        <TextBox HorizontalAlignment="Left" Height="23" Margin="35,168,0,0" TextWrapping="Wrap"  VerticalAlignment="Top" Width="120"/>
+        <Label Content="Description:" HorizontalAlignment="Left" Margin="35,211,0,0" VerticalAlignment="Top"/>
+        <TextBox HorizontalAlignment="Left" Height="66" Margin="35,242,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="214"/>
+        <Button Content="Upload Picture" HorizontalAlignment="Left" Margin="292,242,0,0" VerticalAlignment="Top" Width="141" Height="66" Click="Upload_Picture_Click"/>
+        <Image Name="imgPhoto" HorizontalAlignment="Left" Height="158" Margin="292,69,0,0" VerticalAlignment="Top" Width="141"/>
+
+    </Grid>
+</Window>
