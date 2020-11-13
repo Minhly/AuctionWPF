@@ -16,7 +16,7 @@
         <TextBox Name="itemDESC" HorizontalAlignment="Left" Height="66" Margin="35,242,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="214"/>
         <Button Content="Upload Picture" HorizontalAlignment="Left" Margin="292,242,0,0" VerticalAlignment="Top" Width="141" Height="66" Click="Upload_Picture_Click"/>
         <Image Name="imgPhoto" HorizontalAlignment="Left" Height="158" Margin="292,69,0,0" VerticalAlignment="Top" Width="141"/>
-        <DatePicker Name="datePicked" HorizontalAlignment="Left" Margin="481,100,0,0" VerticalAlignment="Top" Width="120" Height="23" FirstDayOfWeek="Monday" SelectedDateFormat="Short"/>
+        <DatePicker Name="datePicked" HorizontalAlignment="Left" Margin="481,100,0,0" VerticalAlignment="Top" Width="120" Height="23" FirstDayOfWeek="Monday"/>
         <TextBox Name="timePicked" HorizontalAlignment="Left" Height="23" Margin="481,166,0,0" TextWrapping="Wrap" Text="12:12:12" VerticalAlignment="Top" Width="120"/>
         <Label Content="Type a time in format(hh:mm:ss)" HorizontalAlignment="Left" Margin="475,137,0,0" VerticalAlignment="Top"/>
         <Label Content="Deadline Date and time:" HorizontalAlignment="Left" Margin="475,69,0,0" VerticalAlignment="Top"/>
